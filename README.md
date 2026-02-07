@@ -1,5 +1,16 @@
 # Face Recognition Using Eigenvalues (SVD-Based Approach)
 
+Eigenvalue-based face recognition using Singular Value Decomposition (SVD) implemented in MATLAB. The system recognizes faces by comparing eigenvalue feature vectors using Euclidean distance.
+
+## Table of Contents
+- [Overview](#overview)
+- [Objectives](#objectives)
+- [Methodology](#methodology)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Output](#output)
+- [Future Improvements](#future-improvements)
+
 ## Overview
 
 This project presents a face recognition system implemented using **Singular Value Decomposition (SVD)** and eigenvalue-based feature extraction in MATLAB. The system identifies a person by comparing the eigenvalue representation of facial images instead of directly comparing pixel values.
