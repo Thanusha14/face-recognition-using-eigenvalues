@@ -86,5 +86,4 @@ The image with minimum distance is selected as the closest match.
 
 ---
 
-## Project Structure
 
