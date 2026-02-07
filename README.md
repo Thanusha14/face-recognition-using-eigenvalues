@@ -6,10 +6,8 @@ Eigenvalue-based face recognition using Singular Value Decomposition (SVD) imple
 - [Overview](#overview)
 - [Objectives](#objectives)
 - [Methodology](#methodology)
-- [Project Structure](#project-structure)
+- [Key concept used](#project-structure)
 - [Technologies Used](#technologies-used)
-- [Output](#output)
-- [Future Improvements](#future-improvements)
 
 ## Overview
 
