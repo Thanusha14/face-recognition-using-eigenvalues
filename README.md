@@ -1,61 +1,81 @@
-# Face Recognition using Eigenfaces (SVD-Based Method)
-
-Eigenvalue-based face recognition using Singular Value Decomposition (SVD) implemented in MATLAB. The system recognizes faces by comparing eigenvalue feature vectors using Euclidean distance.
-
----
-
-## Table of Contents
-- [Overview](#overview)
-- [Objectives](#objectives)
-- [Methodology](#methodology)
-- [Project Structure](#project-structure)
-- [Technologies Used](#technologies-used)
-- [Output](#output)
-- [Future Improvements](#future-improvements)
-
----
+# Face Recognition Using Eigenvalues (SVD-Based Approach)
 
 ## Overview
 
-This project implements a face recognition system using eigenvalue-based
-feature extraction derived from Singular Value Decomposition (SVD).
-Facial images are converted into mathematical representations, and
-recognition is performed by comparing eigenvalue feature vectors.
+This project presents a face recognition system implemented using **Singular Value Decomposition (SVD)** and eigenvalue-based feature extraction in MATLAB. The system identifies a person by comparing the eigenvalue representation of facial images instead of directly comparing pixel values.
 
-Each face image is converted to grayscale, resized to a fixed dimension,
-and decomposed using SVD. The singular values represent dominant facial
-features and are used for recognition. A test image is matched with the
-dataset using Euclidean distance to determine the closest face.
+Each face image is transformed into a compact mathematical representation using singular values, which capture the most important structural information of the face. Recognition is performed by measuring the Euclidean distance between eigenvalue vectors of the test image and the training dataset.
 
-This project demonstrates the application of linear algebra concepts such
-as eigenvalues, matrix decomposition, and dimensionality reduction in
-computer vision.
+This project demonstrates the application of **linear algebra concepts such as eigenvalues, matrix decomposition, and dimensionality reduction** in computer vision.
 
 ---
 
 ## Objectives
 
-- Implement face recognition using eigenvalues
-- Apply SVD for feature extraction
-- Reduce image dimensionality
-- Identify closest matching face from dataset
+- Implement a face recognition system using eigenvalue-based features.
+- Apply Singular Value Decomposition (SVD) for feature extraction.
+- Reduce image dimensionality while preserving important facial information.
+- Recognize unknown faces using similarity measurement.
+- Demonstrate practical applications of linear algebra in image processing.
 
 ---
 
 ## Methodology
 
-1. Load images from dataset.
-2. Convert images to grayscale.
-3. Resize images to fixed size (100 × 100).
-4. Apply Singular Value Decomposition (SVD).
-5. Extract singular values as feature vectors.
-6. Store eigenvalue vectors.
-7. Process test image similarly.
-8. Compute Euclidean distance.
-9. Select minimum distance as recognized face.
+The system follows the steps below:
+
+### Image Acquisition
+- Face images are loaded from a dataset folder.
+- All images are assumed to be in `.jpg` format.
+
+### Preprocessing
+- Images are converted to grayscale.
+- Images are resized to a fixed dimension (100 × 100).
+- Images are converted to double precision for mathematical computation.
+
+### Feature Extraction using SVD
+
+Singular Value Decomposition is applied:
+
+A = U S Vᵀ
+
+Where:
+- **U** and **V** contain orthogonal basis vectors.
+- **S** contains singular values representing dominant facial features.
+
+The diagonal elements of matrix **S** are extracted and stored as feature vectors.
+
+### Testing Phase
+- A new test image undergoes the same preprocessing steps.
+- Its eigenvalues are computed using SVD.
+
+### Face Matching
+Euclidean distance is calculated between the test image eigenvalues and stored image eigenvalues:
+
+d = √ Σ (xi − yi)²
+
+The image with minimum distance is selected as the closest match.
+
+---
+
+## Key Concepts Used
+
+- Singular Value Decomposition (SVD)
+- Eigenvalues and Eigenvectors
+- Linear Algebra
+- Image Processing
+- Feature Extraction
+- Euclidean Distance Matching
+
+---
+
+## Technologies Used
+
+- MATLAB
+- Image Processing Toolbox
+- Linear Algebra Methods
 
 ---
 
 ## Project Structure
-
 
